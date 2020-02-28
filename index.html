@@ -3,6 +3,7 @@
     <head>
         <title>德国nCoV-19统计图</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
         <meta charset="utf-8">
         <meta property="og:image" content="http://kiang.github.io/TainanDengueMap/og_image_0821.png">
         <link rel="stylesheet" href="./reset.css">
@@ -58,6 +59,7 @@
                 background: #f6f6f6;
                 float: left;
                 text-align: center;
+                padding-top: 66px;
             }
             
             .btn-group-left
@@ -84,7 +86,7 @@
             .btn-group-middle
             {
                 padding-left: 2px;
-                padding-top: 75px;
+                padding-top: 50px;
             }
             .btn-group-middle li
             {
@@ -93,9 +95,29 @@
                 color: black;
                 font-weight: 700;
             }
+            .middle-right-container
+            {
+                width:45px;
+                height: 500px;
+                background: #f6f6f6;
+                float: left;
+                text-align: center;
+            }
+            .btn-group-middle-right
+            {
+                padding-left: 2px;
+                padding-top: 50px;
+            }
+            .btn-group-middle-right li
+            {
+                padding-top: 3px;
+                padding-bottom: 3px;
+                color: black;
+                font-weight: 700;
+            }
             .right-container
             {
-                width: 730px;
+                width: 680px;
                 height:450px;
                 float: right;
                 background: white;
@@ -144,7 +166,7 @@
             
             .legend
             {
-                width: 730px;
+                width: 680px;
                 height:50px;
                 line-height: 20px;
                 float: right;
@@ -196,7 +218,7 @@
         <div class="container">
             <div class="left-container">
                 <ul class="btn-group-left">
-                    <h2 id="content" class="text-muted">确诊分布</h2>
+                    
                     <li >Baden-Württemberg:</li>
                     <li >Bayern:</li>
                     <li >Berlin:</li>
@@ -217,17 +239,39 @@
             </div>
             <div class="middle-container">
                     <ul class="btn-group-middle">
-                        <li >8</li>
+                        <li>现存</li>
+                        <li >10</li>
+                        <li >1</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >1</li>
+                        <li >1</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >20</li>
+                        <li >1</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >0</li>
+                    </ul>
+                </div>
+                <div class="middle-right-container">
+                    <ul class="btn-group-middle-right">
+                        <li>治愈</li>
+                        <li >0</li>
                         <li >14</li>
                         <li >0</li>
                         <li >0</li>
                         <li >0</li>
                         <li >0</li>
-                        <li >2</li>
                         <li >0</li>
                         <li >0</li>
-                        <li >19</li>
-                        <li >2</li>
+                        <li >0</li>
+                        <li >0</li>
+                        <li >0</li>
                         <li >0</li>
                         <li >0</li>
                         <li >0</li>
@@ -261,7 +305,7 @@
 
                 </div>
             <div class="comment">
-                <p>写在最后：目前手动更新数据为主，大家有最新的确诊新闻可以发送到邮箱153050205@qq.com，格式（主题：洲名+城市名+确诊日期，正文：新闻链接）或者也可以建个微信群便于消息汇总。
+                <p>写在最后：目前手动更新数据为主，大家有最新的确诊新闻可以发送到邮箱153050205@qq.com，格式（主题：州名+城市名+确诊日期，正文：新闻链接）或者也可以建个微信群便于消息汇总。
                     同时也欢迎满足以下条件之一的小伙伴们来一起维护更新数据（在德国出现官方统计网站之前），1.python编程能力不错的 2.懂网页前端编程的 3.愿意帮忙花时间整理数据的。
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp作者：MRT&nbspkencht
                 </p>
