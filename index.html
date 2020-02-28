@@ -29,7 +29,7 @@
             }
             .container
             {
-                margin-top: 5%;
+                margin-top: 1.5%;
                 margin-bottom: auto;
                 background:#e6e2c3;
                 position: absolute;
@@ -96,12 +96,13 @@
             .right-container
             {
                 width: 730px;
-                height:470px;
+                height:450px;
                 float: right;
-                background: #d1ba74;
+                background: white;
                 text-align: center;
                 margin: 0;
                 padding:0;
+                
 
             }
             .right-container .button-left
@@ -116,9 +117,9 @@
             }
             .right-container .image
             {
-                margin-top:20px;
+                margin-top:5px;
                 float: right;
-                margin-right: 80px;
+                margin-right: 120px;
             }
             .right-container .mode-button
             {
@@ -127,47 +128,71 @@
             .right-container .mode-button li
             {
                 height: 40px;
-                background: orange;
-                color: white;
+                background: white;
+                color: black;
                 box-shadow: -1px -2px -2px 0;
                 line-height:40px;
-                margin-top: 15px;
+                margin-top: 25px;
                 margin-bottom: 15px;
                 border:solid black 1px;
                 border-radius: 3px;
-                font-size: 23px;
+                font-size: 15px;
+                font-weight: 600;
                 border:none;
+
             }
+            
             .legend
             {
                 width: 730px;
-                height:30px;
+                height:50px;
                 line-height: 20px;
                 float: right;
-                background: #d1ba74;
+                background:white;
                 text-align: right;
-                padding-right: 8px;
-                padding-bottom: 8px;
+                padding-right: 70px;
+                
             }
             .legend span
             {
-                margin-left: 23px;
-                margin-right: 23px;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .tmp
+            {
+                width:1000px;
+                height: 20px;
+                background: #1a1a1a;
+                float: left;
+            }
+            .comment
+            {
+                width:1000px;
+                height: 60px;
+                background: #f6f6f6;
+                float: left;
+                font-weight: 500;
+                
             }
         </style>
+        <script>
+            var time = new Date()
+            Date.prototype.toArray = function()  
+            {   
+                var myDate = this;  
+                var myArray = Array();  
+                myArray[0] = myDate.getFullYear();  
+                myArray[1] = myDate.getMonth();  
+                myArray[2] = myDate.getDate();  
+                myArray[3] = myDate.getHours();  
+                myArray[4] = myDate.getMinutes();  
+                myArray[5] = myDate.getSeconds();  
+                return myArray;  
+            }  
+            console.log(time.toArray())
+        </script>
     </head>
     <body>
-        <script>
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1393405437614114&version=v2.3";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, "script", "facebook-jssdk"));
-        </script>
         <div class="container">
             <div class="left-container">
                 <ul class="btn-group-left">
@@ -213,47 +238,39 @@
             
             <div class="right-container">
                 <h2 id="content" class="text-muted">nCoV-19分布</h2>
+                <p>更新时间：2020年2月29日20点00分</p>
                 <div class="button-left">
                     <ul class="mode-button">
                         <li>当前分布</li>
                         <li>历史趋势</li>
-                        <li>作者说明</li>
-                        <li>待定</li>
+                        <li></li>
+                        <li></li>
                     </ul>
                 </div>
                 <div class="image">
-                    <img src="./nCoV.png"height='350' width="350" alt="">
+                    <img src="./nCoV.png"height='350' width="350 background-color=transparent" alt="">
                 </div>
             </div>     
             <div class="legend">病例数：
                     <span class="colorBox" style="background-color: white;"></span>&nbsp;0
-                    <span class="colorBox" style="background-color: rgb(255, 130, 130);"></span>&nbsp;1~0
-                    <span class="colorBox" style="background-color:rgb(255, 55, 55);"></span>&nbsp;10~100
-                    <span class="colorBox" style="background-color: rgb(162, 0, 0)orange;"></span>&nbsp;100~1000
+                    <span class="colorBox" style="background-color: rgb(236,204,204);"></span>&nbsp;1~0
+                    <span class="colorBox" style="background-color:rgb(207,127,127);"></span>&nbsp;10~100
+                    <span class="colorBox" style="background-color: rgb(248,5,5);"></span>&nbsp;100~1000
+            </div>
+            <div class="tmp">
+
                 </div>
+            <div class="comment">
+                <p>写在最后：目前手动更新数据为主，大家有最新的确诊新闻可以发送到邮箱153050205@qq.com，格式（主题：洲名+城市名+确诊日期，正文：新闻链接）或者也可以建个微信群便于消息汇总。
+                    同时也欢迎满足以下条件之一的小伙伴们来一起维护更新数据（在德国出现官方统计网站之前），1.python编程能力不错的 2.懂网页前端编程的 3.愿意帮忙花时间整理数据的。
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp作者：MRT&nbspkencht
+                </p>
+               
+            </div>
         </div>
        
     
-        <div style="text-align: center;"class="source">
-                <p></p>
-        </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        <script src="//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAHc3-HRqm9C4VnTyWz8ybzw7cY9GoGFRo"></script>
-        <script src="//code.highcharts.com/stock/highstock.js"></script>
-        <script src="//code.highcharts.com/stock/modules/exporting.js"></script>
-        <script src="./js/ColorBar.js"></script>
-        <script src="./js/topojson.js"></script>
-        <script src="main.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
 
-  ga('create', 'UA-80817009-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
     </body>
 </html>
