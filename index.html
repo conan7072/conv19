@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>德国nCoV-19统计图</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-        <meta charset="utf-8">
-        <meta property="og:image" content="http://kiang.github.io/TainanDengueMap/og_image_0821.png">
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <style>
-            html, body {
+ <head>
+  <title>
+   德国nCoV-19统计图
+  </title>
+  <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <meta charset="utf-8"/>
+  <meta content="http://kiang.github.io/TainanDengueMap/og_image_0821.png" property="og:image"/>
+  <link href="./reset.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   html, body {
                 height: 100%;
                 width: 100%;
                 margin: 0;
@@ -190,15 +192,19 @@
             .comment
             {
                 width:950px;
-                height: 60px;
+                height: 80px;
                 background: #f6f6f6;
                 float: left;
                 font-weight: 500;
-                
             }
-        </style>
-        <script>
-            var time = new Date()
+            .comment p
+            {
+
+                margin: 0;
+            }
+  </style>
+  <script>
+   var time = new Date()
             Date.prototype.toArray = function()  
             {   
                 var myDate = this;  
@@ -212,109 +218,222 @@
                 return myArray;  
             }  
             console.log(time.toArray())
-        </script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="left-container">
-                <ul class="btn-group-left">
-                    
-                    <li >Baden-Württemberg:</li>
-                    <li >Bayern:</li>
-                    <li >Berlin:</li>
-                    <li >Brandenburg:</li>
-                    <li >Bremen:</li>
-                    <li >Hamburg:</li>
-                    <li >Hessen:</li>
-                    <li >Mecklenburg-Vorpommer:</li>
-                    <li >Niedersachsen:</li>
-                    <li >Nordrhein-Westfalen:</li>
-                    <li >Rheinland-Pfalz:</li>
-                    <li >Saarland:</li>
-                    <li >Sachsen:</li>
-                    <li >Sachsen-Anhalt:</li>
-                    <li >Schleswig-Holstein:</li>
-                    <li >Thüringen:</li>
-                </ul>
-            </div>
-            <div class="middle-container">
-                    <ul class="btn-group-middle">
-                        <li>现存</li>
-                        <li >10</li>
-                        <li >1</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >1</li>
-                        <li >1</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >20</li>
-                        <li >1</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                    </ul>
-                </div>
-                <div class="middle-right-container">
-                    <ul class="btn-group-middle-right">
-                        <li>治愈</li>
-                        <li >0</li>
-                        <li >14</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                        <li >0</li>
-                    </ul>
-                </div>
-            
-            <div class="right-container">
-                <h2 id="content" class="text-muted">nCoV-19分布</h2>
-                <p>更新时间：2020年2月29日20点00分</p>
-                <div class="button-left">
-                    <ul class="mode-button">
-                        <li>当前分布</li>
-                        <li>历史趋势</li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="image">
-                    <img src="./nCoV.png"height='350' width="350 background-color=transparent" alt="">
-                </div>
-            </div>     
-            <div class="legend">病例数：
-                    <span class="colorBox" style="background-color: white;"></span>&nbsp;0
-                    <span class="colorBox" style="background-color: rgb(236,204,204);"></span>&nbsp;1~0
-                    <span class="colorBox" style="background-color:rgb(207,127,127);"></span>&nbsp;10~100
-                    <span class="colorBox" style="background-color: rgb(248,5,5);"></span>&nbsp;100~1000
-            </div>
-            <div class="tmp">
-
-                </div>
-            <div class="comment">
-                <p>写在最后：目前手动更新数据为主，大家有最新的确诊新闻可以发送到邮箱mrtknecht@gmail.com，格式（主题：州名+城市名+确诊日期，正文：新闻链接）或者也可以建个微信群便于消息汇总。
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="left-container">
+    <ul class="btn-group-left">
+     <li>
+      Baden-Württemberg:
+     </li>
+     <li>
+      Bayern:
+     </li>
+     <li>
+      Berlin:
+     </li>
+     <li>
+      Brandenburg:
+     </li>
+     <li>
+      Bremen:
+     </li>
+     <li>
+      Hamburg:
+     </li>
+     <li>
+      Hessen:
+     </li>
+     <li>
+      Mecklenburg-Vorpommer:
+     </li>
+     <li>
+      Niedersachsen:
+     </li>
+     <li>
+      Nordrhein-Westfalen:
+     </li>
+     <li>
+      Rheinland-Pfalz:
+     </li>
+     <li>
+      Saarland:
+     </li>
+     <li>
+      Sachsen:
+     </li>
+     <li>
+      Sachsen-Anhalt:
+     </li>
+     <li>
+      Schleswig-Holstein:
+     </li>
+     <li>
+      Thüringen:
+     </li>
+    </ul>
+   </div>
+   <div class="middle-container">
+    <ul class="btn-group-middle">
+     <li>
+      现存
+     </li>
+     <li>
+      15
+     </li>
+     <li>
+      1
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      1
+     </li>
+     <li>
+      3
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      18
+     </li>
+     <li>
+      3
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+    </ul>
+   </div>
+   <div class="middle-right-container">
+    <ul class="btn-group-middle-right">
+     <li>
+      治愈
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      14
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+     <li>
+      0
+     </li>
+    </ul>
+   </div>
+   <div class="right-container">
+    <h2 class="text-muted" id="content">
+     nCoV-19分布
+    </h2>
+    <p class="update-time">
+     更新时间：2020年2月29日15点39分
+    </p>
+    <div class="button-left">
+     <ul class="mode-button">
+      <li>
+       当前分布
+      </li>
+      <li>
+       历史趋势
+      </li>
+      <li>
+      </li>
+      <li>
+      </li>
+     </ul>
+    </div>
+    <div class="image">
+     <img alt="" height="350" src="./nCoV.png" width="350 background-color=transparent"/>
+    </div>
+   </div>
+   <div class="legend">
+    病例数：
+    <span class="colorBox" style="background-color: white;">
+    </span>
+    0
+    <span class="colorBox" style="background-color: rgb(236,204,204);">
+    </span>
+    1~0
+    <span class="colorBox" style="background-color:rgb(207,127,127);">
+    </span>
+    10~100
+    <span class="colorBox" style="background-color: rgb(248,5,5);">
+    </span>
+    100~1000
+   </div>
+   <div class="tmp">
+   </div>
+   <div class="comment">
+    <p>
+     写在最后：目前手动更新数据为主，大家有最新的确诊新闻可以发送到邮箱mrtknecht@gmail.com，格式（主题：州名+城市名+确诊日期，正文：新闻链接）或者也可以建个微信群便于消息汇总。
                     同时也欢迎满足以下条件之一的小伙伴们来一起维护更新数据（在德国官方各州统计网站之前），1.python编程能力不错的 2.懂网页前端编程的 3.愿意帮忙花时间整理数据的。
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp作者：MRT&nbspknecht
-                </p>
-               
-            </div>
-        </div>
-       
-    
-        
-
-    </body>
+                    作者：MRT  knecht
+    </p>
+    <p>来源：<a target="_blank" href="https://en.m.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Germany?from=singlemessage&isappinstalled=0">https://en.m.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Germany?from=singlemessage&isappinstalled=0</a></p>
+   </div>
+  </div>
+ </body>
 </html>
