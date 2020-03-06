@@ -1,0 +1,156 @@
+<html><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="COVID-19 Tracking DE">
+  <meta name="description" content="An info-page for tracking the COVID-19 outbreak in Germany">
+  <meta name="keywords" content="COVID-19, Germany, Coronavirus, visualization, infograph">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="5 days">
+  <meta name="author" content="Ye Tian">
+
+  <!-- bootstrap -->
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- echarts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.6.0/dist/echarts.min.js" integrity="sha256-9TvhGliyfFW2O8SvloAhdFQbfjluHQ+vQ7WWWX5Z7oM=" crossorigin="anonymous"></script>
+  <script src="vendor/worldmap/Germany.js"></script>
+
+  <!-- vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159669321-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159669321-1');
+  </script>
+
+  <!-- self -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js" language="javascript"></script>
+</head>
+<body>
+  <nav id="navbar-top" class="navbar navbar-light">
+    <div class="container">
+      <p class="navbar-brand" style="color: white;">德国 COVID-19 现状 (03.03.2020)</p>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" style="color: white;" href="#map">地图</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="#data">数据</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#news">新闻</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <div id="app" class="container"><div id="foreword" class="row page-content"><div align="center" style="width: 100%;"><br> <p>制作团队前言</p></div></div> <div id="map" class="row page-content"><nav class="navbar navbar-light container-nav"><div class="container"><ul class="nav justify-content-end"><li class="nav-item"><a href="#mapContainer" class="nav-link" style="color: white;">德国</a></li> <li class="nav-item"><a href="#bwMapContainer" class="nav-link" style="color: white;">BW</a></li></ul></div></nav> <div align="center" style="width: 100%; height: 500px;"><div id="mapContainer" align="center" style="height: 100%; border-radius: 10px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1583434959683"><div style="position: relative; width: 1140px; height: 500px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1140" height="500" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div> <div id="bwMapContainer" align="center" style="height: 100%;"></div></div></div> <div id="data" class="row page-content"><div class="table-responsive"><table class="table table-striped small-font-size"><thead><tr><th scope="col">联邦州  </th> <th scope="col" class="text-align-center">全部  </th> <th scope="col" class="text-align-center">现存  </th> <th scope="col" class="text-align-center">治愈  </th></tr></thead> <tbody><tr><td> Baden-Württemberg </td> <td class="text-align-center infected-text"><span>
+                  37 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  1100 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Bayern </td> <td class="text-align-center infected-text"><span>
+                  50 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  36 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  14 
+                </span></td></tr><tr><td> Berlin </td> <td class="text-align-center infected-text"><span>
+                  6 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  6 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Brandenburg </td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Bremen </td> <td class="text-align-center infected-text"><span>
+                  3 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  3 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Hamburg </td> <td class="text-align-center infected-text"><span>
+                  4 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  4 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Hessen </td> <td class="text-align-center infected-text"><span>
+                  12 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  12 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Mecklenburg-Vorpommern </td> <td class="text-align-center infected-text"><span>
+                  2 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  2 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Niedersachsen </td> <td class="text-align-center infected-text"><span>
+                  4 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  4 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Nordrhein-Westfalen </td> <td class="text-align-center infected-text"><span>
+                  100 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  100 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Rheinland-Pfalz </td> <td class="text-align-center infected-text"><span>
+                  7 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  7 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Saarland </td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Sachsen </td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Sachsen-Anhalt </td> <td class="text-align-center infected-text"><span>
+                  0 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  0 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Schleswig-Holstein </td> <td class="text-align-center infected-text"><span>
+                  3 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  3 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr><tr><td> Thüringen </td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center infected-text"><span>
+                  1 
+                </span></td> <td class="text-align-center cured-text"><span>
+                  0 
+                </span></td></tr></tbody> <tfoot><tr><td><strong>总计</strong></td> <td class="text-align-center infected-text"><span><strong> 232 </strong></span></td> <td class="text-align-center infected-text"><span><strong> 218 </strong></span></td> <td class="text-align-center cured-text"><span><strong> 14  </strong></span></td></tr></tfoot></table></div></div></div>
+
+
+</body></html>
